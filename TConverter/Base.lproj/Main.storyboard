@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TConverter" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="day" translatesAutoresizingMaskIntoConstraints="NO" id="wmy-7o-uuu">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="T-Converter" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kXg-tU-W7j">
+                                <rect key="frame" x="86" y="70" width="242" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="35"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="-100" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="ydq-ka-ui4">
+                                <rect key="frame" x="18" y="432.5" width="378" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="374" id="S5N-o1-j3Z"/>
+                                </constraints>
+                                <imageReference key="minimumValueImage" image="thermometer.snowflake" catalog="system" symbolScale="large"/>
+                                <imageReference key="maximumValueImage" image="thermometer.sun.fill" catalog="system" symbolScale="large" renderingMode="original"/>
+                                <connections>
+                                    <action selector="sliderAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="cBG-lB-iec"/>
+                                </connections>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="32ºF" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lxd-FH-gbG">
+                                <rect key="frame" x="170.5" y="493.5" width="73" height="42"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0ºC" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WX8-Ab-gRj">
+                                <rect key="frame" x="177.5" y="360.5" width="59" height="42"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ydq-ka-ui4" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="6PB-Gi-R2N"/>
+                            <constraint firstItem="Lxd-FH-gbG" firstAttribute="top" secondItem="ydq-ka-ui4" secondAttribute="bottom" constant="30" id="Qol-iT-qqy"/>
+                            <constraint firstItem="ydq-ka-ui4" firstAttribute="top" secondItem="WX8-Ab-gRj" secondAttribute="bottom" constant="30" id="aOf-n1-O4C"/>
+                            <constraint firstItem="Lxd-FH-gbG" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="et4-2h-bOC"/>
+                            <constraint firstItem="WX8-Ab-gRj" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="g4G-S8-7P2"/>
+                            <constraint firstItem="ydq-ka-ui4" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="zi5-s9-FaL"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="celsiesLabel" destination="WX8-Ab-gRj" id="Ci4-io-HHX"/>
+                        <outlet property="faringatesLabel" destination="Lxd-FH-gbG" id="r3d-n4-ev5"/>
+                        <outlet property="slider" destination="ydq-ka-ui4" id="jOP-wv-vGG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="34.782608695652179" y="97.767857142857139"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="day" width="375" height="667"/>
+        <image name="thermometer.snowflake" catalog="system" width="107" height="128"/>
+        <image name="thermometer.sun.fill" catalog="system" width="103" height="128"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
