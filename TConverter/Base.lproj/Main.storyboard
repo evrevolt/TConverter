@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -17,13 +18,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="day" translatesAutoresizingMaskIntoConstraints="NO" id="wmy-7o-uuu">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="day" translatesAutoresizingMaskIntoConstraints="NO" id="wmy-7o-uuu">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="T-Converter" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kXg-tU-W7j">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="T-Converter" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kXg-tU-W7j">
                                 <rect key="frame" x="86" y="70" width="242" height="45"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="35"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -56,10 +55,16 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="ydq-ka-ui4" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="6PB-Gi-R2N"/>
+                            <constraint firstItem="kXg-tU-W7j" firstAttribute="centerX" secondItem="wmy-7o-uuu" secondAttribute="centerX" id="7z2-De-FFj"/>
+                            <constraint firstItem="kXg-tU-W7j" firstAttribute="centerX" secondItem="WX8-Ab-gRj" secondAttribute="centerX" id="8Fv-cL-cjt"/>
+                            <constraint firstItem="kXg-tU-W7j" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="26" id="CBS-q5-Od0"/>
                             <constraint firstItem="Lxd-FH-gbG" firstAttribute="top" secondItem="ydq-ka-ui4" secondAttribute="bottom" constant="30" id="Qol-iT-qqy"/>
+                            <constraint firstItem="wmy-7o-uuu" firstAttribute="centerY" secondItem="ydq-ka-ui4" secondAttribute="centerY" id="TcF-OJ-sI4"/>
+                            <constraint firstItem="wmy-7o-uuu" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="-44" id="ZFC-f2-eP4"/>
                             <constraint firstItem="ydq-ka-ui4" firstAttribute="top" secondItem="WX8-Ab-gRj" secondAttribute="bottom" constant="30" id="aOf-n1-O4C"/>
                             <constraint firstItem="Lxd-FH-gbG" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="et4-2h-bOC"/>
                             <constraint firstItem="WX8-Ab-gRj" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="g4G-S8-7P2"/>
+                            <constraint firstItem="wmy-7o-uuu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="p1H-4l-4nO"/>
                             <constraint firstItem="ydq-ka-ui4" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="zi5-s9-FaL"/>
                         </constraints>
                     </view>

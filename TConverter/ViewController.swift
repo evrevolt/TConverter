@@ -20,15 +20,6 @@ class ViewController: UIViewController {
         celsiesLabel.text = "\(temperatureCelsion)ºC"
         
         faringatesLabel.text = "\(temperatureCelsion * 9 / 5 + 32)ºF"
-        
-//        if temperatureCelsion < -6 {
-//            sender.thumbTintColor = .blue
-//        } else if temperatureCelsion > 6 {
-//            sender.thumbTintColor = .red
-//        } else {
-//            sender.thumbTintColor = .white
-//        }
-        
     }
     
 }
